@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Racers - Educational Games</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search For Topics" id="searchInput">
+            </div>
+            <button class="start-button" id="startButton">START</button>
+        </header>
+
+        <!-- Filter Section -->
+        <div class="filters">
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="math">Math</button>
+                <button class="filter-btn" data-category="english">English</button>
+                <button class="filter-btn" data-category="aptitude">Aptitude</button>
+                <button class="filter-btn" data-category="more">More</button>
+            </div>
+            <div class="grade-filters">
+                <button class="grade-btn" data-grade="3">3</button>
+                <button class="grade-btn" data-grade="4">4</button>
+                <button class="grade-btn active" data-grade="5">5</button>
+                <button class="grade-btn" data-grade="6">6</button>
+            </div>
+        </div>
+
+        <!-- Game Cards Grid -->
+        <div class="cards-grid" id="cardsGrid">
+            <!-- Cards will be dynamically generated or statically placed -->
+            <div class="card" data-category="math" data-grade="5">
+                <div class="card-background-symbols">
+                    <span class="math-symbol">+</span>
+                    <span class="math-symbol">−</span>
+                    <span class="math-symbol">×</span>
+                    <span class="math-symbol">÷</span>
+                </div>
+                <div class="card-character">🧙</div>
+                <div class="card-title">3 Digit Division</div>
+            </div>
+            <div class="card" data-category="math" data-grade="5">
+                <div class="card-background-symbols">
+                    <span class="math-symbol">+</span>
+                    <span class="math-symbol">−</span>
+                    <span class="math-symbol">×</span>
+                    <span class="math-symbol">÷</span>
+                </div>
+                <div class="card-character">🎯</div>
+                <div class="card-title">3D Shapes</div>
+            </div>
+            <div class="card" data-category="math" data-grade="4">
+                <div class="card-background-symbols">
+                    <span class="math-symbol">+</span>
+                    <span class="math-symbol">−</span>
+                    <span class="math-symbol">×</span>
+                    <span class="math-symbol">÷</span>
+                </div>
+                <div class="card-character">🚀</div>
+                <div class="card-title">Shape Collector</div>
+            </div>
+            <div class="card" data-category="math" data-grade="5">
+                <div class="card-background-symbols">
+                    <span class="math-symbol">+</span>
+                    <span class="math-symbol">−</span>
+                    <span class="math-symbol">×</span>
+                    <span class="math-symbol">÷</span>
+                </div>
+                <div class="card-character">⭐</div>
+                <div class="card-title">Fractions</div>
+            </div>
+            <div class="card" data-category="english" data-grade="5">
+                <div class="card-background-symbols">
+                    <span class="math-symbol">A</span>
+                    <span class="math-symbol">B</span>
+                    <span class="math-symbol">C</span>
+                    <span class="math-symbol">D</span>
+                </div>
+                <div class="card-character">📚</div>
+                <div class="card-title">Vocabulary</div>
+            </div>
+            <div class="card" data-category="aptitude" data-grade="5">
+                <div class="card-background-symbols">
+                    <span class="math-symbol">?</span>
+                    <span class="math-symbol">!</span>
+                    <span class="math-symbol">?</span>
+                    <span class="math-symbol">!</span>
+                </div>
+                <div class="card-character">🧩</div>
+                <div class="card-title">Logic Puzzles</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Overlay (hidden by default) -->
+    <div class="game-overlay" id="gameOverlay">
+        <div class="game-container">
+            <div class="game-header">
+                <div class="task-banner" id="taskBanner">Collect Triangles</div>
+                <div class="game-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Score:</span>
+                        <span class="stat-value" id="scoreDisplay">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Time:</span>
+                        <span class="stat-value" id="timerDisplay">30</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Combo:</span>
+                        <span class="stat-value" id="comboDisplay">0x</span>
+                    </div>
+                </div>
+                <button class="close-game-btn" id="closeGameBtn">✕</button>
+            </div>
+            <div class="power-meter-container">
+                <div class="power-meter-label">Power</div>
+                <div class="power-meter">
+                    <div class="power-meter-fill" id="powerMeterFill"></div>
+                </div>
+            </div>
+            <canvas id="gameCanvas"></canvas>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
+

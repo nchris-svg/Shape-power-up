@@ -1,127 +1,83 @@
-# Number Path Runner
+# 🎮 Math Lock Breaker - How to Play
 
-An educational React.js game where players navigate through a maze by answering math questions correctly.
+## 📍 Where Are My Files?
 
-## Game Overview
-
-**Number Path Runner** is a math-based maze game designed for young learners. Players must answer math questions correctly to move forward through the path. Each correct answer earns coins, and the goal is to reach the finish before time runs out.
-
-## Features
-
-- **Maze Navigation**: Click adjacent tiles to answer questions and move forward
-- **Question System**: Questions pulled from a database with multiple choice answers
-- **Scoring**: Earn coins for correct answers, bonus coins for completing the level
-- **Timer**: Countdown timer adds urgency to gameplay
-- **Progress Tracking**: Visual progress bar shows distance to finish
-- **Clean UI**: Child-friendly design with smooth animations
-
-## Installation
-
-1. Install dependencies:
-```bash
-npm install
+Your game files are located at:
+```
+C:\Users\User\Downloads\CURSOR PROJECTS
 ```
 
-2. Start the development server:
-```bash
-npm start
-```
+All your game code is in the `src` folder:
+- `src/App.jsx` - Main game file
+- `src/components/` - Game components (Lock, Timer, etc.)
+- `src/utils/` - Math problem generator
 
-3. Open [http://localhost:3000](http://localhost:3000) in your browser
+---
 
-## Project Structure
+## 🚀 How to Run the Game
 
-```
-src/
-├── components/
-│   ├── NumberPathRunner.js    # Main game component
-│   ├── TopStatusBar.js         # Progress, timer, coins display
-│   ├── MazeGrid.js             # Maze grid container
-│   ├── PathTile.js             # Individual maze tile
-│   ├── PlayerAvatar.js         # Player character (rendered in tile)
-│   └── QuestionPanel.js        # Question display modal
-├── data/
-│   └── questions.js            # Question database
-├── utils/
-│   └── gameLogic.js            # Maze generation and game utilities
-├── App.js                       # Root component
-└── index.js                     # Entry point
-```
+### First Time Setup (One-time):
 
-## Game Mechanics
+1. **Install Node.js** (if you don't have it)
+   - Go to: https://nodejs.org/
+   - Click "Download" (get the LTS version)
+   - Install it (click through the installer)
+   - **Restart your computer** after installing
 
-### Movement
-- Players start at the top-left tile (🏁)
-- Click adjacent tiles (up, down, left, right) to attempt movement
-- Each tile click triggers a math question
+2. **Open Command Prompt or PowerShell**
+   - Press `Windows Key + R`
+   - Type: `cmd` or `powershell`
+   - Press Enter
 
-### Questions
-- Questions are selected from the database based on tile position
-- Each question has 4 multiple choice options
-- Correct answer → player moves to that tile, earns 1 coin
-- Wrong answer → player stays in place, no movement
+3. **Navigate to your game folder:**
+   ```
+   cd "C:\Users\User\Downloads\CURSOR PROJECTS"
+   ```
 
-### Scoring
-- **+1 coin** for each correct answer
-- **+10 bonus coins** for completing the level with time remaining
-- **+5 bonus coins** for completing the level after time expires
+4. **Install the game dependencies:**
+   ```
+   npm install
+   ```
+   (Wait for this to finish - it might take a minute)
 
-### Timer
-- 60-second countdown per level
-- Game ends when timer reaches 0 or player reaches finish
-- Timer turns red when ≤ 10 seconds remain
+5. **Start the game:**
+   ```
+   npm run dev
+   ```
 
-## Question Database Structure
+6. **Open your browser:**
+   - Look for a message like: `Local: http://localhost:5173`
+   - Copy that URL and paste it into your browser
+   - OR just click on the link if it appears clickable
 
-Each question object contains:
-```javascript
-{
-  banner: 'Addition',           // Optional context/hint
-  question: 'What is 5 + 3?',   // Question text
-  options: ['7', '8', '9', '10'], // MCQ options array
-  correctAnswer: '8'             // Correct answer string
-}
-```
+---
 
-## Customization
+## 🎯 Quick Summary
 
-### Adjust Maze Size
-In `NumberPathRunner.js`, change the `generateMaze()` call:
-```javascript
-const newMaze = generateMaze(6, 6); // rows, cols
-```
+**Game Location:** `C:\Users\User\Downloads\CURSOR PROJECTS`
 
-### Modify Timer Duration
-In `NumberPathRunner.js`, change the initial `timeLeft`:
-```javascript
-timeLeft: 60, // seconds
-```
+**To Run:**
+1. Install Node.js from nodejs.org
+2. Open terminal in that folder
+3. Run: `npm install`
+4. Run: `npm run dev`
+5. Open the URL it shows in your browser
 
-### Add More Questions
-Edit `src/data/questions.js` and add question objects following the same structure.
+---
 
-## Technologies Used
+## ❓ Troubleshooting
 
-- React 18.2.0
-- React Hooks (useState, useEffect, useCallback)
-- CSS3 with animations
-- Modern ES6+ JavaScript
+**"npm is not recognized"**
+- You need to install Node.js first (step 1 above)
 
-## Browser Support
+**"Port already in use"**
+- Close other programs using that port
+- Or press `Ctrl+C` to stop the server and try again
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+**Game doesn't load in browser**
+- Make sure you're using the exact URL shown in the terminal
+- Try refreshing the page (F5)
 
-## Development
+---
 
-The project uses Create React App. To build for production:
-
-```bash
-npm run build
-```
-
-## License
-
-This project is created for educational purposes.
+Your game is ready! Just follow the steps above to play it! 🎉
